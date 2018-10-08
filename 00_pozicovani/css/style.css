@@ -1,0 +1,74 @@
+h1 {
+    color: red;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    margin: 0;
+}
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+li {
+    padding: 20px;
+}
+li a {
+    color: red;
+}
+@media screen and (min-width:600px) {
+    nav {
+        width: 100%;
+    }
+    nav ul{
+        display: block;
+    }
+  }
+  @media screen and (max-width:599px) {
+    nav li {
+        width: 100%;
+    }
+  }
+.my-div {
+    font-weight: bolder;
+}
+article span {
+    color: red;
+}
+article .bolder-than-usual {
+    font-weight: bolder;
+    color: black;
+}
+article * {
+    color: green;
+}
+
+section {
+    width: 50%;
+    /*margin: 0 auto;*/
+    margin: 0 auto 0 auto;
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;*/
+    position: relative;
+    border: 1px dashed #000;
+}
+.border {
+    border: 5px solid #000;
+    background: red;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 0;
+}
+#border1 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+#border1 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
