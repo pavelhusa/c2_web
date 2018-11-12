@@ -1,0 +1,72 @@
+a[href^="http:"] {
+    color: red;
+}
+
+a:link,
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: greenyellow;
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+article h1+p+div+p {
+    font-weight: bolder;
+}
+
+p:before {
+    content: " > ";
+    font-size: 20px;
+    color: red;
+    font-weight: bolder;
+}
+
+p::after {
+    content: " < ";
+    font-size: 20px;
+    color: red;
+    font-weight: bolder;
+}
+
+p::first-letter {
+    font-size: 20px;
+    color: red;
+}
+
+p:empty {
+    display: none;
+}
+
+
+/*
+p:hover {
+    background: #999;
+    color: #222;
+    position: relative;
+    top: 20px;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+}
+*/
+
+.links a:first-child {
+    padding-left: 20px;
+}
+
+.links a:last-child {
+    padding-right: 20px;
+    text-align: right;
+}
