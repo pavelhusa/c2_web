@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Generator pozdravu/motivacni vety</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            width: 350px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        div {
+            padding-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            padding: 5px;
+            width: 150px;
+        }
+        
+        p {
+            background: #FFC125;
+            color: #5E2612;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="name">Zadej jméno (v 5. pádě):</label>
+        <input id="name" type="text" placeholder="">
+    </div>
+    <div>
+        <label for="greet">Pozdrav</label><input id="greet" type="radio" name="tp" value="greet" checked>
+        <label for="motivate">Motivační věta</label><input id="motivate" type="radio" name="tp" value="motivate">
+    </div>
+    <div>
+        <button id="generate">Generuj větu</button>
+    </div>
+    <p id="outputWrapper"></p>
+</body>
+
+</html>
