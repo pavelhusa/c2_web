@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        //var i = 0;
+        var i;
+        let a;
+        for (var i = 0; i < 10; i++) {
+            a = i;
+            console.log(i)
+        }
+        console.log(a);
+    </script>
+</head>
+
+<body>
+    <div id="data"></div>
+    <input type="button" value="show" onclick="document.getElementById('data').innerText = 'dada'; document.getElementById('redtext').attributes = 'disabled';">
+    <input type="button" value="redtext" id="redtext" onclick="document.getElementById('data').style = 'color: red;';">
+    <input type="button" value="hide" onclick="document.getElementById('data').innerText = '';">
+</body>
+
+</html>

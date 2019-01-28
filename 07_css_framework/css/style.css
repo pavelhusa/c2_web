@@ -1,0 +1,10 @@
+/* CSS template */
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container>aside {
+    width: 30%;
+}
