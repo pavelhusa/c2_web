@@ -18,5 +18,4 @@ const generate = () => {
     } else {
         out.innerText = name.value + ' jsi nejlepsi!!!';
     }
-
 }

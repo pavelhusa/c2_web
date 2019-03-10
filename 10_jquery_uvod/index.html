@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jednoduchá webová kalkulačka</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Vítejte v jednoduché kalkulačce!</h1>
+    <input type="text" id="cislo1" size="5" /> + <input type="text" id="cislo2" size="5" /><br />
+    <input type="button" id="tlacitko" value="Spočti!">
+    <div id="vysledek"></div>
+    <script>
+        $(document).ready(function() {
+            $("#tlacitko").click(function() {
+                var cislo1 = $("#cislo1").val();
+                var cislo2 = $("#cislo2").val();
+                var vysledek = parseInt(cislo1) + parseInt(cislo2);
+                alert(vysledek);
+            });
+        });
+    </script>
+</body>
+
+</html>
