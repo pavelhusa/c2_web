@@ -13,12 +13,24 @@
     <input type="button" id="tlacitko" value="Spočti!">
     <div id="vysledek"></div>
     <script>
+        // jQuery
         $(document).ready(function() {
             $("#tlacitko").click(function() {
                 var cislo1 = $("#cislo1").val();
                 var cislo2 = $("#cislo2").val();
                 var vysledek = parseInt(cislo1) + parseInt(cislo2);
                 alert(vysledek);
+            });
+        });
+        // Vanilla JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            let button = document.getElementById('tlacitko');
+            button.addEventListener('click', e => {
+                e.preventDefault();
+                let cislo1 = document.getElementById('cislo1');
+                let cislo2 = document.getElementById('cislo2');
+                let res = parseInt(cislo1.value) + parseInt(cislo2.value);
+                window.alert(res);
             });
         });
     </script>
