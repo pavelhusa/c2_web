@@ -5,10 +5,12 @@
     <title>Basic</title>
     <script src="/page.js"></script>
     <base href="/basic/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <h1>Basic</h1>
+    <div id="content"></div>
     <p></p>
     <ul>
         <li><a href="./">/</a></li>
@@ -17,6 +19,7 @@
         <li><a href="./contact">/contact</a></li>
         <li><a href="./contact/me">/contact/me</a></li>
         <li><a href="./pozdrav/pavel">Pozdrav Pavla</a></li>
+        <li><a href="./subpage">Subpage</a></li>
         <li><a href="./not-found?foo=bar">/not-found</a></li>
     </ul>
 
@@ -35,8 +38,6 @@
         page('/contact/:contactName', contact);
         page('/pozdrav/:name', sayHello);
         page('/subpage', subpage);
-        page('/user', login);
-        page('/user/:name', login);
         page();
 
         function subpage() {
