@@ -5,10 +5,12 @@
     <title>Basic</title>
     <script src="/page.js"></script>
     <base href="/basic/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <h1>Basic</h1>
+    <div id="content"></div>
     <p></p>
     <ul>
         <li><a href="./">/</a></li>
@@ -16,8 +18,8 @@
         <li><a href="./about">/about</a></li>
         <li><a href="./contact">/contact</a></li>
         <li><a href="./contact/me">/contact/me</a></li>
-        <li><a href="./pozdrav/pavel">Pozdrav Pavla</a></li>
         <li><a href="./not-found?foo=bar">/not-found</a></li>
+        <li><a href="./subpage">/subpage</a></li>
     </ul>
 
     <script>
@@ -32,33 +34,30 @@
         page('/', index);
         page('/about', about);
         page('/contact', contact);
-        page('/contact/:contactName', contact);
-        page('/pozdrav/:name', sayHello);
         page('/subpage', subpage);
-        page('/user', login);
-        page('/user/:name', login);
+        page('/contact/:contactName', contact);
         page();
 
-        function subpage() {
+        function subpage(ctx) {
             $('#content').text("loading");
             $('#content').load('/subpage.html');
         }
 
         function index() {
-            document.querySelector('p').textContent = 'viewing index';
+            $('#content').html('');
+            document.querySelector('p')
+                .textContent = 'viewing index';
         }
 
         function about() {
-            document.querySelector('p').textContent = 'viewing about';
+            $('#content').html('');
+            document.querySelector('p')
+                .textContent = 'viewing about';
         }
 
         function contact(ctx) {
-            console.log(ctx);
-            document.querySelector('p').textContent = 'viewing contact ' + (ctx.params.contactName || '');
-        }
-
-        function sayHello(ctx) {
-            window.alert(ctx.params.name)
+            document.querySelector('p')
+                .textContent = 'viewing contact ' + (ctx.params.contactName || '');
         }
     </script>
 </body>
